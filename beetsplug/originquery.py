@@ -231,7 +231,7 @@ class OriginQuery(BeetsPlugin):
         task_info['origin_path'] = origin_path = Path(origin_glob[0])
 
         conflict = False
-        likelies, consensus = current_metadata(task.items)
+        likelies = current_metadata(task.items)
         task_info['tag_compare'] = tag_compare = OrderedDict()
         for tag in BEETS_TO_LABEL:
             tag_compare.update({tag: {
